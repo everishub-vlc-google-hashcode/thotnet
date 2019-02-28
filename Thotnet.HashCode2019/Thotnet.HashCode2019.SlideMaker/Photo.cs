@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace Thotnet.HashCode2019.SlideMaker
 {
@@ -6,6 +6,6 @@ namespace Thotnet.HashCode2019.SlideMaker
     {
         public int Id { get; set; }
         public bool IsVertical { get; set; }
-        public String[] tags { get; set; }
+        public List<string> tags { get; set; }
     }
 }
