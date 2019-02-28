@@ -7,6 +7,7 @@ namespace Thotnet.HashCode2019.SlideMaker
         public Slide(Photo ph1)
         {
             this.PhotoId1 = ph1.Id;
+            this.PhotoId2 = -1;
             this.Tags = ph1.Tags;
         }
         public Slide(Photo ph1, Photo ph2)
