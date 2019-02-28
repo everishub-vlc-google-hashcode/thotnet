@@ -8,7 +8,7 @@ namespace Thotnet.HashCode2019.Runner
         {
             Console.WriteLine("Hello Thots!");
 
-            ParserText ps = new ParserText();
+            ThotFileReader ps = new ThotFileReader();
 
             ps.ParseInput();
         }
