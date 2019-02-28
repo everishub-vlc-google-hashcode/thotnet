@@ -4,50 +4,19 @@
     {
         public static int Min(Slide sl1, Slide sl2)
         {
-            var min = 0;
+            var score1 = sl1.Tags.Count;
+            var score2 = sl2.Tags.Count;
 
-            var commonTags = 0;
+            var commonScore = 0;
 
-            var sl1Count = sl1.Tags.Count;
-            var sl2Count = sl2.Tags.Count;
-
-            foreach (var sl1Tag in sl1.Tags)
+            foreach (var tag in sl1.Tags)
             {
-                if (sl2.Tags.Contains(sl1Tag))
-                {
-                    commonTags++;
-                }
-
-                if (commonTags > sl1Count || commonTags > sl2Count)
-                {
-                    break;
-                }
+                if (sl2.Tags.Contains(tag)) commonScore++;
             }
 
-            if (commonTags >= sl1Count)
-            {
-                if (sl1Count <= sl2Count)
-                {
-                    return sl1Count;
-                }
-                else
-                {
-                    return sl2Count;
-                }
-            }
-
-            if (commonTags >= sl2Count)
-            {
-                if (sl2Count <= sl1Count)
-                {
-                    return sl2Count;
-                }
-                else
-                {
-                    return sl1Count;
-                }
-            }
-            return commonTags;
+            if (score1 >= score2 && score1 >= commonScore) return score1;
+            else if (score2 >= score1 && score2 >= commonScore) return score2;
+            else return commonScore;
         }
     }
 }
