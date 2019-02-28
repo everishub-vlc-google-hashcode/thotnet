@@ -14,8 +14,8 @@
                 if (sl2.Tags.Contains(tag)) commonScore++;
             }
 
-            if (score1 >= score2 && score1 >= commonScore) return score1;
-            else if (score2 >= score1 && score2 >= commonScore) return score2;
+            if (score1 <= score2 && score1 <= commonScore) return score1;
+            else if (score2 <= score1 && score2 <= commonScore) return score2;
             else return commonScore;
         }
     }
