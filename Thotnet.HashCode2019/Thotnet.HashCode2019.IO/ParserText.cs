@@ -14,7 +14,7 @@ namespace Thotnet.HashCode2019.Runner
         int TotalPhotos = 0;
 
 
-        public IEnumerable<Photo> ParseInput(string path = FilePath)
+        public Photo[] ParseInput(string path = FilePath)
         {
             var textArray = File.ReadAllLines(path);
 
@@ -42,7 +42,7 @@ namespace Thotnet.HashCode2019.Runner
             }
 
 
-            return photoList;
+            return photoList.ToArray();
         }
 
     }
