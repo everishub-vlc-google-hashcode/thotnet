@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Thotnet.HashCode2019.SlideMaker
 {
-    class Slide
+    public class Slide
     {
-        public int PhotoId { get; set; }
+        public Slide(Photo ph1)
+        {
+            this.PhotoId1 = ph1.Id;
+        }
+        public Slide(Photo ph1, Photo ph2)
+        {
+            this.PhotoId1 = ph1.Id;
+            this.PhotoId2 = ph1.Id;
+        }
+
+        public int PhotoId1 { get; set; }
         public int PhotoId2 { get; set; }
         public List<string> Tags { get; set; }
     }
