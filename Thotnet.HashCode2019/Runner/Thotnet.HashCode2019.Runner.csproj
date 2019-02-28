@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Thotnet.HashCode2019.IO\Thotnet.HashCode2019.IO.csproj" />
+  </ItemGroup>
+
 </Project>

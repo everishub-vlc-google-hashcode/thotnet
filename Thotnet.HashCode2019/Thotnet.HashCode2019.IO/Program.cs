@@ -7,10 +7,6 @@ namespace Thotnet.HashCode2019.Runner
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Thots!");
-
-            ThotFileReader ps = new ThotFileReader();
-
-            ps.ParseInput();
         }
     }
 }
