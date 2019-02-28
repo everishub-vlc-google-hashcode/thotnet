@@ -6,7 +6,7 @@ namespace Thotnet.HashCode2019.Runner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Thots!");
         }
     }
 }
