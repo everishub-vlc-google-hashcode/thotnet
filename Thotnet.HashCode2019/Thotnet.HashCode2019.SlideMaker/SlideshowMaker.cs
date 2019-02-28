@@ -55,12 +55,13 @@ namespace Thotnet.HashCode2019.SlideMaker
                     }
                 }
 
-                if (candidateIndex != 0 && candidateIndex < slides.Count)
+                if (candidateIndex != 0)
                 {
                     slideShow.Add(slides[i]);
                     slideShow.Add(slides[candidateIndex]);
                     slides.RemoveAt(i);
-                    slides.RemoveAt(candidateIndex);
+                    
+                    if ((candidateIndex != slides.Count)) slides.RemoveAt(candidateIndex);
                 }
                 // Remains of slides could be reordered in the case of being Vertical to seek more possible combinations and avoid losing all their potential score
             }

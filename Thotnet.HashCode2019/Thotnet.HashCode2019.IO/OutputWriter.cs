@@ -14,11 +14,22 @@ namespace Thotnet.HashCode2019.IO
 
             fileText += slideShow.Count;
             fileText += "\n";
+
+            var duh = false;
         
             foreach (var slide in slideShow)
             {
-                fileText += slide.PhotoId1;
-                fileText += (slide.PhotoId2 != -1) ? $" {slide.PhotoId2.ToString()}\n" :  "\n";
+                if (!duh)
+                {
+                    fileText += slide.PhotoId1;
+                    fileText += (slide.PhotoId2 != -1) ? $" {slide.PhotoId2.ToString()}\n" : "\n";
+
+                    duh = true;
+                }
+                else
+                {
+                    duh = false;
+                }
             }
 
             File.WriteAllText(path, fileText);
