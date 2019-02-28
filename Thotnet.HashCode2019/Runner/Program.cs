@@ -48,6 +48,9 @@ namespace Thotnet.HashCode2019.Runner
             }
             Console.WriteLine($"Score matched => {score}");
 
+
+            OutputWriter.WriteOutput(matchedSlides);
+
             Console.ReadLine();
         }
     }
