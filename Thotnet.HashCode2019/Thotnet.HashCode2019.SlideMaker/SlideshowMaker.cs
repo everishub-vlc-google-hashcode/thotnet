@@ -6,7 +6,7 @@ namespace Thotnet.HashCode2019.SlideMaker
 {
     public class SlideshowMaker
     {
-        public static List<Slide> GetSlides(Photo[] photos)
+        public static Slide[] GetSlides(Photo[] photos)
         {
             var slides = new List<Slide>();
             var bufferedVerticalPhoto = 0;
@@ -29,7 +29,7 @@ namespace Thotnet.HashCode2019.SlideMaker
                 }
                 count++;
             }
-            return slides;
+            return slides.ToArray();
         }
     }
 }

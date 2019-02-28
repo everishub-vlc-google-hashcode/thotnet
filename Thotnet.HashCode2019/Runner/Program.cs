@@ -16,8 +16,16 @@ namespace Thotnet.HashCode2019.Runner
 
             var slideshow = SlideshowMaker.GetSlides(photos);
 
-            //DO SHIT HERE FFS!
+            var score = 0;
+
+            for (int i = 0; i < slideshow.Length -1; i++)
+            {
+                score = score + Scoring.Min(slideshow[i], slideshow[i + 1]);
+            }
+
             watch.Stop();
+
+            Console.WriteLine($"Score without doing nothing => {score}");
             Console.WriteLine($"Execution time => {watch.ElapsedMilliseconds} miliseconds");
             Console.ReadLine();
         }

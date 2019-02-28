@@ -6,7 +6,7 @@ namespace Thotnet.HashCode2019.SlideMaker
 {
     static class SliderReorder
     {
-        public Slide[] Reorder(Slide[] slides)
+        public static Slide[] Reorder(Slide[] slides)
         {
             var bestScore = -1;
 
