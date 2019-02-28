@@ -20,14 +20,19 @@ namespace Thotnet.HashCode2019.Runner
 
             var photoList = new List<Photo>();
 
+            var photoId = 0;
+
             int.TryParse(textArray[0], out var totalPhotos);
 
             for (int i = 1; i < textArray.Length; i++)
             {
                 var line = textArray[i].Split(' ');
 
+                
+
                 var photo = new Photo()
                 {
+                    Id = photoId,
                     IsVertical = (line[0] == "H") ? false : true,
                     TagCount = Convert.ToInt32(line[1]),
                     Tags = new List<string>()
@@ -38,6 +43,7 @@ namespace Thotnet.HashCode2019.Runner
                     photo.Tags.Add(line[x]);
                 }
 
+                photoId++;
                 photoList.Add(photo);
             }
 
