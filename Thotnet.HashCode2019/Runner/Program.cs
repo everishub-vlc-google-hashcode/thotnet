@@ -13,8 +13,8 @@ namespace Thotnet.HashCode2019.Runner
         {
             var watch = Stopwatch.StartNew();
 
-            //var photos = new ThotFileReader().ParseInput(@"C:\thotnet\b_lovely_landscapes.txt");
-            var photos = new ThotFileReader().ParseInput(@"C:\thotnet\c_memorable_moments.txt");
+            var photos = new ThotFileReader().ParseInput(@"C:\thotnet\b_lovely_landscapes.txt");
+            //var photos = new ThotFileReader().ParseInput(@"C:\thotnet\c_memorable_moments.txt");
 
             var unorderedslideshow = SlideshowMaker.GetSlides(photos);
 

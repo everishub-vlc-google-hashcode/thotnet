@@ -46,7 +46,7 @@ namespace Thotnet.HashCode2019.SlideMaker
 
             for (int i = 0; i < slides.Count; i++)
             {
-                for (int j = 1; i < slides.Count; i++)
+                for (int j = 1; j < slides.Count; j++)
                 {
                     if (Scoring.Min(slides[i], slides[j]) > Scoring.Min(slides[i], candidate))
                     {
@@ -55,8 +55,9 @@ namespace Thotnet.HashCode2019.SlideMaker
                     }
                 }
 
-                if (candidateIndex != 0)
+                if (candidateIndex != 0 && candidateIndex < slides.Count)
                 {
+                    slideShow.Add(slides[i]);
                     slideShow.Add(slides[candidateIndex]);
                     slides.RemoveAt(i);
                     slides.RemoveAt(candidateIndex);
