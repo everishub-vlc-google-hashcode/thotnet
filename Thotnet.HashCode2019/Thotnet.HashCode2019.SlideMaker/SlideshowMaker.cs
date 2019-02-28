@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Thotnet.HashCode2019.SlideMaker
 {
-    class SlideshowMaker
+    public class SlideshowMaker
     {
         public static List<Slide> GetSlides(Photo[] photos)
         {

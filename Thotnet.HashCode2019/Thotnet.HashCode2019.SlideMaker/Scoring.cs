@@ -4,14 +4,10 @@ using System.Text;
 
 namespace Thotnet.HashCode2019.SlideMaker
 {
-    public class Scoring
+    public static class Scoring
     {
-        public Scoring(Slide sl1, Slide sl2)
-        {
 
-        }
-
-        public int Min(Slide sl1, Slide sl2)
+        public static int Min(Slide sl1, Slide sl2)
         {
             var min = 0;
             var commonTags = 0;
