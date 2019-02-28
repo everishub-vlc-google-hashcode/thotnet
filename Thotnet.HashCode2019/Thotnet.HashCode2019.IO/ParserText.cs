@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using Thotnet.HashCode2019.SlideMaker;
 
-namespace Thotnet.HashCode2019.Runner
+namespace Thotnet.HashCode2019.IO
 {
     public class ThotFileReader
     {
