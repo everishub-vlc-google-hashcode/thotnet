@@ -1,54 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Thotnet.HashCode2019.SlideMaker
+﻿namespace Thotnet.HashCode2019.SlideMaker
 {
     public static class Scoring
     {
-
         public static int Min(Slide sl1, Slide sl2)
         {
-            var min = 0;
-            var commonTags = 0;
-            var sl1Count = sl1.Tags.Count;
-            var sl2Count = sl2.Tags.Count;
+            var score1 = sl1.Tags.Count;
+            var score2 = sl2.Tags.Count;
 
-            // TODOS FALTA COMPROBAR LOS CASOS DE IGUALES
+            var commonScore = 0;
 
-            foreach (var sl1Tag in sl1.Tags)
+            foreach (var tag in sl1.Tags)
             {
-                if (sl2.Tags.Contains(sl1Tag))
-                {
-                    commonTags++;
-                }
-
-                if (commonTags > sl1Count || commonTags > sl2Count)
-                {
-                    if (sl1Count <= sl2Count)
-                    {
-                        return sl1Count;
-                    }
-                    else
-                    {
-                        return sl2Count;
-                    }
-                }
-            }            
-
-            if ((sl1Count < sl2Count) && (sl1Count < commonTags))
-            {
-                min = sl1Count;
+                if (sl2.Tags.Contains(tag)) commonScore++;
             }
-            else if ((sl2Count < sl1Count) && (sl2Count < commonTags))
-            {
-                min = sl2Count;
-            }
-            else if ((commonTags < sl1Count) && (commonTags < sl2Count))
-            {
-                min = commonTags;
-            }
-            return min;
+
+            if (score1 <= score2 && score1 <= commonScore) return score1;
+            else if (score2 <= score1 && score2 <= commonScore) return score2;
+            else return commonScore;
         }
     }
 }
