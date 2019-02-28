@@ -12,16 +12,20 @@ namespace Thotnet.HashCode2019.SlideMaker
         public Slide(Photo ph1, Photo ph2)
         {
             this.PhotoId1 = ph1.Id;
-            this.PhotoId2 = ph1.Id;
+            this.PhotoId2 = ph2.Id;
+            var newTags = new List<string>();
 
-            this.Tags = ph1.Tags;
-            if (ph2.Tags != null)
+            foreach (var tag in ph1.Tags)
             {
-                foreach (var tag in ph2.Tags)
-                {
-                    this.Tags.Add(tag);
-                }
+                newTags.Add(tag);
             }
+
+            foreach (var tag in ph2.Tags)
+            {
+                newTags.Add(tag);
+            }
+
+            this.Tags = newTags;
         }
 
         public int PhotoId1 { get; set; }
