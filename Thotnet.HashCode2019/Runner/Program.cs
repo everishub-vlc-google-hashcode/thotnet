@@ -20,7 +20,7 @@ namespace Thotnet.HashCode2019.Runner
 
             var score = 0;
 
-            for (int i = 0; i < slideshow.Length -1; i++)
+            for (int i = 0; i < slideshow.Count-1; i++)
             {
                 score = score + Scoring.Min(slideshow[i], slideshow[i + 1]);
             }
