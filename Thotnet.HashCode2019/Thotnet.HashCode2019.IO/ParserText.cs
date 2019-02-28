@@ -33,7 +33,7 @@ namespace Thotnet.HashCode2019.Runner
                     Tags = new List<string>()
                 };
 
-                for (int x = 2; x < textArray.Length; x++)
+                for (int x = 2; x < line.Length; x++)
                 {
                     photo.Tags.Add(line[x]);
                 }
@@ -42,7 +42,7 @@ namespace Thotnet.HashCode2019.Runner
             }
 
 
-            return Enumerable.Empty<Photo>();
+            return photoList;
         }
 
     }
