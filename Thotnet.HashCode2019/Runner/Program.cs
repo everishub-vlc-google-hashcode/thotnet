@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using Thotnet.HashCode2019.IO;
 using Thotnet.HashCode2019.SlideMaker;
 
@@ -15,6 +16,7 @@ namespace Thotnet.HashCode2019.Runner
             var photos = new ThotFileReader().ParseInput(@"C:\thotnet\b_lovely_landscapes.txt");
 
             var slideshow = SlideshowMaker.GetSlides(photos);
+            var sortedSlides = slideshow.OrderBy(s => s.Tags.Count).ToArray();
 
             var score = 0;
 
