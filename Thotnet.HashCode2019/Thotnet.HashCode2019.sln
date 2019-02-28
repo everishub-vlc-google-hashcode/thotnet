@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thotnet.HashCode2019.Runner", "Runner\Thotnet.HashCode2019.Runner.csproj", "{DFE83ECE-98AF-483E-B31A-806916E1E5B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thotnet.HashCode2019.IO", "Thotnet.HashCode2019.IO\Thotnet.HashCode2019.IO.csproj", "{FA05A775-C412-4449-80F9-278788E62A7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thotnet.HashCode2019.SlideMaker", "Thotnet.HashCode2019.SlideMaker\Thotnet.HashCode2019.SlideMaker.csproj", "{F5D867C6-9722-4CEE-83F2-C86CA166B7C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +22,10 @@ Global
 		{FA05A775-C412-4449-80F9-278788E62A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA05A775-C412-4449-80F9-278788E62A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA05A775-C412-4449-80F9-278788E62A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D867C6-9722-4CEE-83F2-C86CA166B7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D867C6-9722-4CEE-83F2-C86CA166B7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D867C6-9722-4CEE-83F2-C86CA166B7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D867C6-9722-4CEE-83F2-C86CA166B7C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
